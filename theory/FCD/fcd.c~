@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <dirent.h>
+void error(char *text)
+{
+	perror(text);
+	exit();
+}
+DIR *findDir(char *target)
+{
+	DIR* targetptr;
+	if((targetptr 
+}
+int main(int argc, char *argv)
+{
+	if(argc < 1)
+	{
+		error("Input Directory Name");		
+	}	
+
+}
