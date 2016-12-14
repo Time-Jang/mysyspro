@@ -29,7 +29,7 @@ void myftw(const char *dirname,int tab_num)
 		print_error("Open directory is failed");
 	namebuf[buflen++] = '/';
 	print_tab(tab_num);
-	printf("Dir : %s\n",dirname);
+	printf("%s\n",dirname);
 	while((dir = readdir(dirptr)) != NULL)
 	{
 		strcpy(namebuf + buflen, dir->d_name);
@@ -42,7 +42,7 @@ void myftw(const char *dirname,int tab_num)
 		else
 		{
 			print_tab(tab_num + 1);
-			printf("File : %s\n",namebuf);	
+			printf("%s\n",namebuf);	
 		}
 	}
 	closedir(dirptr);
